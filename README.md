@@ -12,6 +12,7 @@ This repo exhibits my highly opiniated approach to design. How I turn this beaut
 ## Table of Contents
 - [Tech Stack](#tech-stack) 
 - [Proof of Concept](#proof-of-concept)
+- [Conclusion](#conclusion)
 
 ## Tech Stack
 
@@ -49,8 +50,9 @@ const useViewport = () => {
 
 export default useViewport;
 ```
+Browser waits for `window`'s `resize` event listener to take place. After `width` emitted, our app will decide which chunks (mobile or desktop) should be fetched and rendered on the screen. It only fetches chunks that it needs for certain screen size. As little chunks as possible.
 
-How about bundle size? Is it any good? We can code-split those two seperated layouts altogether. Browser waits for `window`'s `resize` event listener to take place. After `width` emitted, our app will decide which chunks (mobile or desktop) should be fetched and rendered on the screen. It only fetches chunks that it needs for certain screen size. As little chunks as possible.
+Viola! Zero CSS media query.
 
 Here's the code sample:
 
@@ -77,3 +79,11 @@ const Home = () => {
 
 export default Home;
 ```
+
+## Conclusion
+
+This approach will make you stick to good old separation of concerns. Any changes on desktop layout will not affect mobile layout. It also goes the other way round. My friend and I can work on both layouts in parallel without conflicts.
+
+What is its drawback?
+- It heavily relies on JavaScript. If users disable JavaScript, then this so called approach will be useless.
+- It seems like we work twice but actually it's a good investment.
