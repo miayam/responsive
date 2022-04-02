@@ -50,7 +50,7 @@ const useViewport = () => {
 export default useViewport;
 ```
 
-How about bundle size? Is it any good? We can code-split those two seperated layouts altogether. Browser waits for `window`'s `resize` event listener to take place. After `width` emitted, our app will decide which chunks (mobile or desktop) should be fetched and rendered on the screen.
+How about bundle size? Is it any good? We can code-split those two seperated layouts altogether. Browser waits for `window`'s `resize` event listener to take place. After `width` emitted, our app will decide which chunks (mobile or desktop) should be fetched and rendered on the screen. It only fetches chunks that it needs for certain screen size. As little chunks as possible.
 
 Here's the code sample:
 
