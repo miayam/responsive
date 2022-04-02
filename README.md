@@ -30,7 +30,7 @@ As long as it can respond to screen size, platform and orientation, it's Respons
 
 In real world, a lack of compatibility and consistency between mobile and desktop layout is commonplace and present everywhere, just like that mockup above. Therefore, I prefer to separate the code for mobile and desktop.
 
-If we seperate the code for mobile and desktop, how it responds to viewport change? Meet our new friend `resize` event listener. Here's React hook function that listens to `window`'s `resize` and emmits current width to its consumers.
+If we seperate the code for mobile and desktop, how it responds to viewport change? Meet our new friend `resize` event listener. Here's React hook function that listens to `window`'s `resize` and emmits current width to its consumers whenever user change the screen size or orientation.
 
 ```js
 import { useEffect, useState } from 'react';
@@ -50,8 +50,6 @@ const useViewport = () => {
 
 export default useViewport;
 ```
-
-Whenever users change the screen size or orientation (vertical or landscape), this hook will emmit current `width`. Therefore, we can decide which layout should be displayed on the screen based on it.
 
 How about bundle size? Is it any good? We can code-split those two seperated layouts altogether. Browser waits for window's resize event listener to take place. After `width` emitted, browser will decide which chunks (mobile or desktop) should be rendered on the screen.
 
