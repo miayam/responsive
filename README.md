@@ -12,7 +12,7 @@ almost every tech-related question but given this mockup, how do I turn this bea
 
 ## Table of Contents
 - [Tech Stack](#tech-stack) 
-- [Introduction](#introduction)
+- [Proof of Concept](#proof-of-concept)
 
 ## Tech Stack
 
@@ -20,7 +20,7 @@ This code example is built on top of:
 - [React](https://github.com/facebook/react) - JavaScript library for building user interface.
 - [SCSS](https://sass-lang.com/) - CSS with superpowers.
 
-## Introduction
+## Proof of Concept
 
 What is Responsive Web design?
 
