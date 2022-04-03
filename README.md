@@ -26,7 +26,7 @@ What is Responsive Web design?
 
 > Responsive Web design is the approach that suggests that design and development should respond to the user’s behavior and environment based on screen size, platform and orientation.
 
-As long as it can respond to screen size, platform and orientation, it's Responsive Web design. And it has nothing to do with CSS media query. 
+As long as it can respond to screen size, platform and orientation, it's Responsive Web design. And it doesn't have to be CSS media query.
 
 In the real world, a lack of compatibility and consistency between mobile and desktop layout is commonplace and present everywhere, just like that mockup above. Therefore, I prefer to separate the code for mobile and desktop.
 
