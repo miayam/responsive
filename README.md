@@ -28,7 +28,7 @@ What is Responsive Web design?
 
 As long as it can respond to screen size, platform and orientation, it's Responsive Web design. And it has nothing to do with CSS media query. 
 
-In real world, a lack of compatibility and consistency between mobile and desktop layout is commonplace and present everywhere, just like that mockup above. Therefore, I prefer to separate the code for mobile and desktop.
+In the real world, a lack of compatibility and consistency between mobile and desktop layout is commonplace and present everywhere, just like that mockup above. Therefore, I prefer to separate the code for mobile and desktop.
 
 If we seperate the code for mobile and desktop, how it responds to screen size or orientation? Meet our friend `resize` event listener. The snippet below is a React hook that listens to `window`'s `resize` event. It will emmit current width whenever users change the screen size or orientation and passes it down to consumers.
 
