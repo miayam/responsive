@@ -30,7 +30,7 @@ As long as it can respond to screen size, platform and orientation, it's Respons
 
 In real world, a lack of compatibility and consistency between mobile and desktop layout is commonplace and present everywhere, just like that mockup above. Therefore, I prefer to separate the code for mobile and desktop.
 
-If we seperate the code for mobile and desktop, how it responds to screen size or orientation? Meet our friend `resize` event listener. Here's React hook that listens to `window`'s `resize` event, emmits current width, and passes it down to consumers whenever users change the screen size or orientation.
+If we seperate the code for mobile and desktop, how it responds to screen size or orientation? Meet our friend `resize` event listener. The snippet below is a React hook that listens to `window`'s `resize` event. It will emmit current width whenever users change the screen size or orientation and passes it down to consumers.
 
 ```js
 import { useEffect, useState } from 'react';
@@ -50,9 +50,7 @@ const useViewport = () => {
 
 export default useViewport;
 ```
-Browser waits for `window`'s `resize` event listener to take place. After `width` emitted, our app will decide which chunks (mobile or desktop) should be fetched and rendered on the screen. It only fetches chunks that it needs for certain screen size. As little chunks as possible.
-
-Viola! Zero CSS media query.
+Browser waits for `window`'s `resize` event listener to take place. After `width` emitted, our app will decide which chunks (mobile or desktop) should be fetched and rendered on the screen. It only fetches chunks that it needs. As little chunks as possible.
 
 Here's the code sample:
 
@@ -84,6 +82,6 @@ export default Home;
 
 This approach will make you stick to good old separation of concerns. Any changes on desktop layout will not affect mobile layout. It also goes the other way round. My friend and I can work on both layouts in parallel without conflicts.
 
-What is its drawback?
+What are the drawbacks of this approach?
 - It heavily relies on JavaScript. If users disable JavaScript, then this so called approach will be useless.
 - It seems like we work twice but actually it's a good investment.
