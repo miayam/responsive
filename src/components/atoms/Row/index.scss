@@ -1,0 +1,9 @@
+.a-row {
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+
+  & > * + * {
+    margin-left: 16px;
+  }
+}
