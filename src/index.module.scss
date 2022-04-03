@@ -13,11 +13,11 @@ $palettes: (
 
 :root {
   @each $key, $value in $palettes {
-    --s#{$key}: #{$value};
+    --#{$key}: #{$value};
   }
 };
 
-// With this, JavaScript can import these color palettes. Good stuff! 
+// With :export, JavaScript can import these color palettes. Good stuff! 
 :export {
   @each $key, $value in $palettes {
     #{$key}: #{$value};
