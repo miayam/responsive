@@ -1,0 +1,16 @@
+@import-normalize; /* Bring in normalize.css styles */
+
+@import 'styles/palettes.module.scss';
+
+:root {
+  @each $key, $value in $palettes {
+    --#{$key}: #{$value};
+  }
+};
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--background);
+}

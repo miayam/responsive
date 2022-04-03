@@ -1,7 +1,0 @@
-@import 'styles/palettes.module.scss';
-
-:root {
-  @each $key, $value in $palettes {
-    --#{$key}: #{$value};
-  }
-};
