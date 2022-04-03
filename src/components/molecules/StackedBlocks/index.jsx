@@ -1,0 +1,1 @@
+// Can generate stacked blocks
