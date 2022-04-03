@@ -1,0 +1,10 @@
+$spacing: (
+  gap: 20px
+);
+
+// With :export, JavaScript can import this $spacing variable. Good stuff! 
+:export {
+  @each $key, $value in $spacing {
+    #{$key}: #{$value};
+  }
+}

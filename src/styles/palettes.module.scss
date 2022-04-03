@@ -1,0 +1,19 @@
+// Default palettes
+$palettes: (
+  color__1: #0089E0,
+  color__2: #E53458,
+  color__3: #8C7A5B,
+  color__4: #B85E61,
+  color__5: #7F00CB,
+  color__6: #EEF3F6,
+  color__7: #007A67,
+  color__8: #6953FE,
+  color__9: #475C6D
+);
+
+// With :export, JavaScript can import these color palettes. Good stuff! 
+:export {
+  @each $key, $value in $palettes {
+    #{$key}: #{$value};
+  }
+}

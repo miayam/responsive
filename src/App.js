@@ -1,6 +1,6 @@
 import Column from './components/atoms/Column';
 import Row from './components/atoms/Row';
-import * as palettesModule from './index.module.scss';
+import * as palettesModule from './styles/palettes.module.scss';
 
 const { default: palettes } = palettesModule;
 
