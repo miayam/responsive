@@ -1,8 +1,8 @@
 $spacing: (
-  gap: 20px,
-  maxWidthForDesktop: 1120px,
-  maxWidthForMobile: 600px,
-  breakpoint: 600px
+  gap: 20,
+  maxWidthForDesktop: 1120,
+  maxWidthForMobile: 600,
+  breakpoint: 600
 );
 
 // With :export, JavaScript can import this $spacing variable. Good stuff! 

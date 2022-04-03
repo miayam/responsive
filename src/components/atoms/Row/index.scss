@@ -4,9 +4,9 @@
 .a-row {
   display: flex;
   flex-direction: row;
-  margin: 0;
+  width: inherit;
 
   & > * + * {
-    margin-left: map.get($spacing, "gap");
+    margin-left: map.get($spacing, "gap") + px;
   }
 }

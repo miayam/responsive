@@ -4,9 +4,10 @@
 .a-column {
   display: flex;
   flex-direction: column;
-  margin: 0;
+  width: 100%;
+  flex-basis: auto;
 
   & > * + * {
-    margin-top: map.get($spacing, "gap"); 
+    margin-top: map.get($spacing, "gap") + px;
   }
 }

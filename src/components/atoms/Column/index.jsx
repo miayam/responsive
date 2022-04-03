@@ -1,9 +1,14 @@
 import React from 'react';
 import './index.scss';
 
-const Column = ({ children }) => {
+const Column = ({ children, flexBasis }) => {
   return (
-    <div className="a-column">
+    <div
+      className="a-column"
+      style={{
+        flexBasis
+      }}
+    >
       {children}
     </div>
   );

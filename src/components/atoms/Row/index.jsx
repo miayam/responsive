@@ -1,9 +1,17 @@
 import React from 'react';
 import './index.scss';
 
-const Row = ({ children }) => {
+const Row = ({
+  children,
+  flexBasis
+}) => {
   return (
-    <div className="a-row">
+    <div
+      className="a-row"
+      style={{
+        flexBasis
+      }}
+    >
       {children}
     </div>
   );
