@@ -1,21 +1,6 @@
-import Row from "../../../atoms/Row";
 import BlocksInARow from "../../../molecules/BlocksInARow";
 import StackedBlocks from "../../../molecules/StackedBlocks";
-import * as palettesModule from '../../../../styles/palettes.module.scss';
-import { aspectRatiosForDesktop as aspectRatios } from "../../../../constants";
-
-const { default: palettes } = palettesModule;
-
-const boxColorCodes = Object.keys(palettes).filter(palette => palette !== 'background');
-
-const boxes = boxColorCodes.map((code, index) => {
-  return {
-    aspectRatio: aspectRatios[index],
-    colorCode: `var(--${code})`,
-    number: index + 1,
-    key: index + 1
-  }
-});
+import { boxes } from "../helpers";
 
 const left = () => [
   boxes[0]
