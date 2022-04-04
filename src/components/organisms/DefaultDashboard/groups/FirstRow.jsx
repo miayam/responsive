@@ -27,7 +27,7 @@ const right = () => [
   boxes[1],
   <BlocksInARow
     key={`box-${boxes[2].number}-and-${boxes[3].number}`}
-    parentRatio={0.5}
+    parentRatio={0.5} // 50% of direct parent
     renderProps={(parentRatio) => subGroupRight(parentRatio)}
   />
 ];
@@ -38,12 +38,12 @@ const FirstRow = () => (
     renderProps={() => ([
       <StackedBlocks
         key={`box-${boxes[0].number}`}
-        parentRatio={0.5}
+        parentRatio={0.5} // 50% of direct parent
         renderProps={left}
       />,
       <StackedBlocks
         key={`box-${boxes[1].number}-and-${boxes[2].number}`}
-        parentRatio={0.5}
+        parentRatio={0.5} // 50% of direct parent
         renderProps={right}
       />
     ])}

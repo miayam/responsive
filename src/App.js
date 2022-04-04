@@ -1,9 +1,9 @@
-import DefaultDashboard from './components/organisms/DefaultDashboard';
+import Home from "./components/templates/Home";
 
 function App() {
   return (
     <div className="App">
-      <DefaultDashboard />
+      <Home />
     </div>
   );
 }
