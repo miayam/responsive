@@ -3,23 +3,44 @@ import { aspectRatiosForMobile, aspectRatiosForDesktop } from "../constants";
 
 const { default: palettes } = palettesModule;
 
-const boxColorCodes = Object.keys(palettes).filter(palette => palette !== 'background');
+const boxColorKeys = Object.keys(palettes).filter(palette => palette !== 'background');
 
-export const boxesForDesktop = boxColorCodes.map((code, index) => {
+const shuffleColorValues = (boxColorValues) => {
+  const suffledColorValues = [...boxColorValues].sort(() => Math.random() - 0.5);
+  return suffledColorValues; 
+};
+
+const onClickHandler = () => {
+  const currentColorValues = boxColorKeys.map(key => {
+    return window
+      .getComputedStyle(document.documentElement)
+      .getPropertyValue(`--${key}`)
+  });
+
+  const shuffledColorValues = shuffleColorValues(currentColorValues);
+
+  boxColorKeys.forEach((key, index) => {
+    document.documentElement.style.setProperty(`--${key}`, shuffledColorValues[index]);
+  });
+};
+
+export const boxesForDesktop = boxColorKeys.map((code, index) => {
   return {
     aspectRatio: aspectRatiosForDesktop[index],
     colorCode: `var(--${code})`,
     number: index + 1,
-    key: index + 1
+    key: index + 1,
+    onClick: onClickHandler
   }
 });
 
-export const boxesForMobile = boxColorCodes.map((code, index) => {
+export const boxesForMobile = boxColorKeys.map((code, index) => {
   return {
     aspectRatio: aspectRatiosForMobile[index],
     colorCode: `var(--${code})`,
     number: index + 1,
-    key: index + 1
+    key: index + 1,
+    onClick: onClickHandler
   }
 });
 

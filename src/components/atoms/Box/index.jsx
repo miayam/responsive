@@ -3,7 +3,8 @@ import './index.scss';
 const Box = ({
   aspectRatio,
   number,
-  colorCode
+  colorCode,
+  onClick
 })  => {
   const { x, y } = aspectRatio;
 
@@ -21,6 +22,7 @@ const Box = ({
         style={{
           backgroundColor: colorCode 
         }}
+        onClick={onClick}
       >
         {number}
       </div>
