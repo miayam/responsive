@@ -20,21 +20,21 @@ const VerticalDashboard = () => {
             parentRatio={1}
             renderProps={() => [
               adjustRatio(boxes[2], 0.5),
-              adjustRatio(boxes[3], 0.5),
+              adjustRatio(boxes[3], 0.5)
             ]}
           />,
           <BlocksInARow
             key="mobile-boxes-group-3"
             parentRatio={1}
             renderProps={() => [
-              boxes[1],
+              boxes[1]
             ]}
           />,
           <BlocksInARow
             key="mobile-boxes-group-4"
             parentRatio={1}
             renderProps={() => [
-              boxes[6],
+              boxes[6]
             ]}
           />,
           <BlocksInARow
@@ -42,7 +42,7 @@ const VerticalDashboard = () => {
             parentRatio={1}
             renderProps={() => [
               adjustRatio(boxes[4], 0.5),
-              adjustRatio(boxes[7], 0.5),
+              adjustRatio(boxes[7], 0.5)
             ]}
           />,
           <BlocksInARow
@@ -50,7 +50,7 @@ const VerticalDashboard = () => {
             parentRatio={1}
             renderProps={() => [
               adjustRatio(boxes[5], 0.5),
-              adjustRatio(boxes[8], 0.5),
+              adjustRatio(boxes[8], 0.5)
             ]}
           />,
         ]}
