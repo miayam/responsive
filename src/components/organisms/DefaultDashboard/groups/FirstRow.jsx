@@ -1,6 +1,6 @@
 import BlocksInARow from "../../../molecules/BlocksInARow";
 import StackedBlocks from "../../../molecules/StackedBlocks";
-import { boxes } from "../helpers";
+import { boxesForDesktop as boxes } from "../../../../helpers";
 
 const left = () => [
   boxes[0]
