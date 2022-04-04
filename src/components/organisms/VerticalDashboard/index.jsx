@@ -9,14 +9,14 @@ const VerticalDashboard = () => {
       <StackedBlocks
         renderProps={() => [
           <BlocksInARow
-            key="group-1"
+            key="mobile-boxes-group-1"
             parentRatio={1}
             renderProps={() => [
               boxes[0]
             ]}
           />,
           <BlocksInARow
-            key="group-2"
+            key="mobile-boxes-group-2"
             parentRatio={1}
             renderProps={() => [
               adjustRatio(boxes[2], 0.5),
@@ -24,21 +24,21 @@ const VerticalDashboard = () => {
             ]}
           />,
           <BlocksInARow
-            key="group-3"
+            key="mobile-boxes-group-3"
             parentRatio={1}
             renderProps={() => [
               boxes[1],
             ]}
           />,
           <BlocksInARow
-            key="group-4"
+            key="mobile-boxes-group-4"
             parentRatio={1}
             renderProps={() => [
               boxes[6],
             ]}
           />,
           <BlocksInARow
-            key="group-5"
+            key="mobile-boxes-group-5"
             parentRatio={1}
             renderProps={() => [
               adjustRatio(boxes[4], 0.5),
@@ -46,7 +46,7 @@ const VerticalDashboard = () => {
             ]}
           />,
           <BlocksInARow
-            key="group-6"
+            key="mobile-boxes-group-6"
             parentRatio={1}
             renderProps={() => [
               adjustRatio(boxes[5], 0.5),

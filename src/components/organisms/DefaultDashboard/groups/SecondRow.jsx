@@ -23,17 +23,17 @@ const SecondRow = () => {
       parentRatio={1}
       renderProps={() => ([
         <StackedBlocks
-          key={`boxes-${boxes[4].number}-and-${boxes[5].number}`}
+          key={`desktop-boxes-${boxes[4].number}-and-${boxes[5].number}`}
           parentRatio={1 / 3.0} // 33.33%
           renderProps={left}
         />,
         <StackedBlocks
-          key={`boxes-${boxes[6].number}`}
+          key={`desktop-boxes-${boxes[6].number}`}
           parentRatio={1 / 3.0} // 33.33%
           renderProps={center}
         />,
         <StackedBlocks
-          key={`boxes-${boxes[7].number}-and-${boxes[8].number}`}
+          key={`desktop-boxes-${boxes[7].number}-and-${boxes[8].number}`}
           parentRatio={1 / 3.0} // 33.33%
           renderProps={right}
         />
