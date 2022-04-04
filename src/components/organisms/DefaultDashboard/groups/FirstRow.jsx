@@ -1,26 +1,14 @@
 import BlocksInARow from "../../../molecules/BlocksInARow";
 import StackedBlocks from "../../../molecules/StackedBlocks";
-import { boxesForDesktop as boxes } from "../../../../helpers";
+import { adjustRatio, boxesForDesktop as boxes } from "../../../../helpers";
 
 const left = () => [
   boxes[0]
 ];
 
 const subGroupRight = (parentRatio) => [
-  {
-    ...boxes[2],
-    aspectRatio: {
-      x: boxes[2].aspectRatio.x,
-      y: boxes[2].aspectRatio.y * parentRatio 
-    }
-  },
-  {
-    ...boxes[3],
-    aspectRatio: {
-      x: boxes[3].aspectRatio.x,
-      y: boxes[3].aspectRatio.y * parentRatio
-    }
-  }
+  adjustRatio(boxes[2], parentRatio),
+  adjustRatio(boxes[3], parentRatio)
 ];
 
 const right = () => [
