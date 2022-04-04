@@ -22,3 +22,13 @@ export const boxesForMobile = boxColorCodes.map((code, index) => {
     key: index + 1
   }
 });
+
+export const adjustRatio = (box, parentRatio) => {
+  return {
+    ...box,
+    aspectRatio: {
+      x: box.aspectRatio.x,
+      y: box.aspectRatio.y * parentRatio
+    }
+  };
+};
