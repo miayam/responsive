@@ -1,7 +1,7 @@
 import React from 'react';
 import './index.scss';
 
-const Column = ({ children, flexBasis }) => {
+const Column = ({ flexBasis, children }) => {
   return (
     <div
       className="a-column"

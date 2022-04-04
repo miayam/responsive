@@ -1,10 +1,7 @@
 import React from 'react';
 import './index.scss';
 
-const Row = ({
-  children,
-  flexBasis
-}) => {
+const Row = ({ flexBasis, children }) => {
   return (
     <div
       className="a-row"
