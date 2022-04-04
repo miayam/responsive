@@ -1,5 +1,5 @@
 import * as palettesModule from '../styles/palettes.module.scss';
-import { aspectRatiosForMobie, aspectRatiosForDesktop } from "../constants";
+import { aspectRatiosForMobile, aspectRatiosForDesktop } from "../constants";
 
 const { default: palettes } = palettesModule;
 
@@ -16,7 +16,7 @@ export const boxesForDesktop = boxColorCodes.map((code, index) => {
 
 export const boxesForMobile = boxColorCodes.map((code, index) => {
   return {
-    aspectRatio: aspectRatiosForMobie[index],
+    aspectRatio: aspectRatiosForMobile[index],
     colorCode: `var(--${code})`,
     number: index + 1,
     key: index + 1
