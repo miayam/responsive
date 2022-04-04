@@ -2,7 +2,7 @@ import DefaultDashboard from '../../organisms/DefaultDashboard';
 
 const Desktop = () => {
   return (
-    <div className="t-home--desktop">
+    <div className="t-home t-home--desktop">
       <DefaultDashboard />
     </div>
   );

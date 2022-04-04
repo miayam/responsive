@@ -2,7 +2,7 @@ import VerticalDashboard from '../../organisms/VerticalDashboard';
 
 const Mobile = () => {
   return (
-    <div className="t-home--mobile">
+    <div className="t-home t-home--mobile">
       <VerticalDashboard />
     </div>
   );
