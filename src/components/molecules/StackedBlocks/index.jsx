@@ -27,7 +27,7 @@ const StackedBlocks = ({ parentRatio, renderProps }) => {
         );
       })}
     </Column>
-  ) 
+  ); 
 };
 
 export default StackedBlocks;
