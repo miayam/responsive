@@ -11,7 +11,7 @@ const subGroupRight = (parentRatio) => [
     ...boxes[2],
     aspectRatio: {
       x: boxes[2].aspectRatio.x,
-      y: boxes[2].aspectRatio.y * parentRatio
+      y: boxes[2].aspectRatio.y * parentRatio 
     }
   },
   {
@@ -39,12 +39,12 @@ const FirstRow = () => (
       <StackedBlocks
         key={`box-${boxes[0].number}`}
         parentRatio={0.5}
-        renderProps={() => left()}
+        renderProps={left}
       />,
       <StackedBlocks
         key={`box-${boxes[1].number}-and-${boxes[2].number}`}
         parentRatio={0.5}
-        renderProps={() => right()}
+        renderProps={right}
       />
     ])}
   />
