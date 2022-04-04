@@ -20,22 +20,28 @@ const right = () => [
   />
 ];
 
-const FirstRow = () => (
-  <BlocksInARow
-    parentRatio={1}
-    renderProps={() => ([
-      <StackedBlocks
-        key={`desktop-boxes-${boxes[0].number}`}
-        parentRatio={0.5} // 50% of direct parent
-        renderProps={left}
-      />,
-      <StackedBlocks
-        key={`desktop-boxes-${boxes[1].number}-and-${boxes[2].number}`}
-        parentRatio={0.5} // 50% of direct parent
-        renderProps={right}
-      />
-    ])}
-  />
-);
+const FirstRow = () => {
+  if (boxes.length < 9) {
+    return <h1>Error</h1>
+  }
+
+  return (
+    <BlocksInARow
+      parentRatio={1}
+      renderProps={() => ([
+        <StackedBlocks
+          key={`desktop-boxes-${boxes[0].number}`}
+          parentRatio={0.5} // 50% of direct parent
+          renderProps={left}
+        />,
+        <StackedBlocks
+          key={`desktop-boxes-${boxes[1].number}-and-${boxes[2].number}`}
+          parentRatio={0.5} // 50% of direct parent
+          renderProps={right}
+        />
+      ])}
+    />
+  );
+};
 
 export default FirstRow;

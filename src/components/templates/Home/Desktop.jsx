@@ -1,8 +1,12 @@
 import DefaultDashboard from '../../organisms/DefaultDashboard';
 
-const Desktop = () => {
+const Desktop = ({ width }) => {
   return (
-    <div className="t-home t-home--desktop">
+    <div
+      data-testid="dashboard"
+      data-width={width}
+      className="t-home t-home--desktop"
+    >
       <DefaultDashboard />
     </div>
   );

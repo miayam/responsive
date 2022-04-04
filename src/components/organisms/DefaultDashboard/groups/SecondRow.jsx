@@ -18,6 +18,10 @@ const right = () => [
 ];
 
 const SecondRow = () => {
+  if (boxes.length < 9) {
+    return <h1>Error</h1>
+  }
+
   return (
     <BlocksInARow
       parentRatio={1}

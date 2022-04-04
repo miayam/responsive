@@ -21,3 +21,5 @@ export const aspectRatiosForMobile = [
   { x: 2, y: 1 }, // Box 8
   { x: 2, y: 1 }, // Box 9
 ];
+
+export const BREAKPOINT = 600;

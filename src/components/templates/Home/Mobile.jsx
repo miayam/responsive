@@ -1,8 +1,12 @@
 import VerticalDashboard from '../../organisms/VerticalDashboard';
 
-const Mobile = () => {
+const Mobile = ({ width }) => {
   return (
-    <div className="t-home t-home--mobile">
+    <div
+      data-testid="dashboard"
+      data-width={width}
+      className="t-home t-home--mobile"
+    >
       <VerticalDashboard />
     </div>
   );

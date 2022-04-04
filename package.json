@@ -38,6 +38,7 @@
   },
   "devDependencies": {
     "@testing-library/react-hooks": "^7.0.2",
+    "identity-obj-proxy": "^3.0.0",
     "mq-polyfill": "^1.1.8"
   }
 }
