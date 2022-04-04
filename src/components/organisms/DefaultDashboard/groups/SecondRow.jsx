@@ -3,20 +3,8 @@ import StackedBlocks from "../../../molecules/StackedBlocks";
 import { boxes } from "../helpers";
 
 const left = () => [
-  {
-    ...boxes[4],
-    aspectRatio: {
-      x: boxes[4].aspectRatio.x,
-      y: boxes[4].aspectRatio.y
-    }
-  },
-  {
-    ...boxes[5],
-    aspectRatio: {
-      x: boxes[5].aspectRatio.x,
-      y: boxes[5].aspectRatio.y
-    }
-  },
+  boxes[4],
+  boxes[5],
 ];
 
 const center = () => [
@@ -25,20 +13,8 @@ const center = () => [
 
 
 const right = () => [
-  {
-    ...boxes[7],
-    aspectRatio: {
-      x: boxes[7].aspectRatio.x,
-      y: boxes[7].aspectRatio.y
-    }
-  },
-  {
-    ...boxes[8],
-    aspectRatio: {
-      x: boxes[8].aspectRatio.x,
-      y: boxes[8].aspectRatio.y
-    }
-  },
+  boxes[7],
+  boxes[8]
 ];
 
 const SecondRow = () => {
